@@ -10,32 +10,19 @@ import SwiftUI
 
 struct SignInButtonStyle: ButtonStyle {
     
-    let fillColor: Color = .purpleButton
     func makeBody(configuration: Configuration) -> some View {
         return SignInButton(
-            configuration: configuration,
-            fillColor: fillColor
+            configuration: configuration
         )
     }
     
     struct SignInButton: View {
         
         let configuration: Configuration
-        let fillColor: Color
-        let weight: CGFloat = 289.0
-        let height: CGFloat = 46.0
         
         var body: some View {
             return configuration.label
-                .padding(20)
-                .frame(width: weight, height: height, alignment: .center)
-                .background(
-                    RoundedRectangle(
-                        cornerRadius: 8
-                    ).fill(
-                        fillColor
-                    )
-                )
+                .modifier(ButtonModifier())
         }
     }
     
