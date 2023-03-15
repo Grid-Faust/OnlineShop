@@ -32,6 +32,7 @@ struct SignInView: View {
                 .textFieldStyle(OvalTextFieldStyle())
                 
                 VStack(alignment: .leading, spacing: 10){
+                    //TODO: move to Main page
                     //MARK: Button
                     Button(action: {}) {
                         HStack{

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D9FA9E329C2460300AC4D82 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9FA9E229C2460300AC4D82 /* UserViewModel.swift */; };
 		6DDB193329C0E9DB00FC86A0 /* OnlineShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDB193229C0E9DB00FC86A0 /* OnlineShopApp.swift */; };
 		6DDB193529C0E9DB00FC86A0 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDB193429C0E9DB00FC86A0 /* SignInView.swift */; };
 		6DDB193729C0E9E000FC86A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB193629C0E9E000FC86A0 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D9FA9E229C2460300AC4D82 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		6DDB192F29C0E9DB00FC86A0 /* OnlineShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDB193229C0E9DB00FC86A0 /* OnlineShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineShopApp.swift; sourceTree = "<group>"; };
 		6DDB193429C0E9DB00FC86A0 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				6DDB193829C0E9E000FC86A0 /* Preview Content */,
 				6DDB194A29C1065B00FC86A0 /* Utils */,
 				6DDB194F29C2371C00FC86A0 /* UserModel.swift */,
+				6D9FA9E229C2460300AC4D82 /* UserViewModel.swift */,
 			);
 			path = OnlineShop;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DDB193529C0E9DB00FC86A0 /* SignInView.swift in Sources */,
+				6D9FA9E329C2460300AC4D82 /* UserViewModel.swift in Sources */,
 				6DDB195029C2371C00FC86A0 /* UserModel.swift in Sources */,
 				6DDB194929C0F1EE00FC86A0 /* AppColors.swift in Sources */,
 				6DDB194729C0F06500FC86A0 /* SignInButtonStyle.swift in Sources */,
