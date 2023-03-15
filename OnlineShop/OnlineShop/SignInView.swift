@@ -43,7 +43,7 @@ struct SignInView: View {
                             Spacer()
                         }
                     }
-                  
+                    
                     .buttonStyle(SignInButtonStyle())
                     
                     //MARK: Log in
@@ -51,11 +51,12 @@ struct SignInView: View {
                         Text("Already have an account?")
                             .font(.footnote)
                             .foregroundColor(.secondary)
-                            //.frame(width: 122.91, height: 9.42)
+                        //.frame(width: 122.91, height: 9.42)
                         
+                        //TODO: move to LoginPage
                         Text("Log in")
                             .font(.footnote)
-                            //.frame(width: 27.99, height: 9.57)
+                        //.frame(width: 27.99, height: 9.57)
                         
                     }
                 }
@@ -63,25 +64,32 @@ struct SignInView: View {
             }
             
             //MARK: Sign in with Apple/Google
-            HStack(alignment: .center){
-                Image("GoogleImage")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 23.83, height: 24.22)
-                
-                Text("Sign in with Google")
-                    .font(.callout)
+            VStack(alignment: .leading, spacing: 30){
+                Button(action: {}) {
+                    HStack(alignment: .center){
+                        Image("GoogleImage")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 23.83, height: 24.22)
+                        
+                        Text("Sign in with Google")
+                            .font(.callout)
+                            .tint(.black)
+                    }
+                }
+                Button(action: {}) {
+                    HStack(alignment: .center){
+                        Image("AppleImage")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 18.38, height: 21.87)
+                        
+                        Text("Sign in with Apple")
+                            .font(.callout)
+                            .tint(.black)
+                    }
+                }
             }
-            HStack(alignment: .center){
-                Image("AppleImage")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 18.38, height: 21.87)
-                
-                Text("Sign in with Apple")
-                    .font(.callout)
-            }
-            
         }
         
     }
