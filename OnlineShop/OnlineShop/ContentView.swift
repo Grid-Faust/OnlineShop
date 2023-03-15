@@ -45,7 +45,28 @@ struct SignInView: View {
                 .padding(.horizontal, 20)
                 .buttonStyle(SignInButtonStyle())
             }
+            HStack(alignment: .center){
+                Image("GoogleImage")
+                               .resizable()
+                               .scaledToFit()
+                               .frame(width: 23.83, height: 24.22)
+                       
+                Text("Sign in with Google")
+                    .font(.callout)
+            }
+            
+            HStack(alignment: .center){
+                Image("AppleImage")
+                               .resizable()
+                               .scaledToFit()
+                               .frame(width: 18.38, height: 21.87)
+                       
+                Text("Sign in with Apple")
+                    .font(.callout)
+            }
+            
         }
+           
     }
 }
 
