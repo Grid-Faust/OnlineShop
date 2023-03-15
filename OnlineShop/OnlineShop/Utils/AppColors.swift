@@ -13,4 +13,5 @@ extension Color {
     static let buttonBackgroung = Color(red: 232/255, green: 232/255, blue: 232/255, opacity: 1)
     static let background = Color(red: 250/255, green: 249/255, blue: 255/255, opacity: 1)
     static let placeholder = Color(red: 123/255, green: 123/255, blue: 123/255)
+    static let logInButton = Color(red: 37/255, green: 79/255, blue: 230/255)
 }
