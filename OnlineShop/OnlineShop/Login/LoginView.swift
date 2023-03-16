@@ -11,7 +11,8 @@ import SwiftUI
 struct LoginView: View {
     
     @State var name = ""
-    @State var pasword = ""
+    @State var password = ""
+    @State var hidden = false
     
     var body: some View {
         VStack(spacing: 55) {
@@ -26,9 +27,26 @@ struct LoginView: View {
                 VStack(spacing: 45) {
                     TextField("First name", text: $name)
                         .modifier(PlaceholderModifier())
-                    TextField("Password", text: $pasword)
-                        .modifier(PlaceholderModifier())
-                }
+                    ZStack(alignment: .trailing) {
+                        Group {
+                            if hidden {
+                                TextField("Password", text: $password)
+                                    .modifier(PlaceholderModifier())
+                            } else {
+                                SecureField("Password", text: $password)
+                                    .modifier(PlaceholderModifier())
+                            }
+                        } // Group
+                        //MARK: eye button
+                        Button(action: {
+                            self.hidden.toggle()})
+                        {
+                            Image(systemName: self.hidden == true ? "eye.fill" : "eye.slash.fill")
+                                .foregroundColor(self.hidden ? .green : .gray)
+                                .offset(x: -10, y: 0)
+                        }
+                    } // ZStack
+                } // VStack(spacing: 45)
                 .padding()
                 .textFieldStyle(OvalTextFieldStyle())
                 
@@ -46,7 +64,7 @@ struct LoginView: View {
                     }
                     
                     .buttonStyle(SignInButtonStyle())
-                }
+                } // VStack(alignment: .leading, spacing: 10)
                 
             }
         }

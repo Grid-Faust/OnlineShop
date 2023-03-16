@@ -19,6 +19,7 @@ struct ButtonModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding(20)
+            .fixedSize()
             .frame(width: weight, height: height, alignment: .center)
             .background(
                 RoundedRectangle(
