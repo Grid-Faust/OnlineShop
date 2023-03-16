@@ -12,61 +12,63 @@ struct LoginView: View {
     
     @State var name = ""
     @State var password = ""
-    @State var hidden = false
+    @State private var hidden = false
     
     var body: some View {
-        VStack(spacing: 55) {
-            //MARK: greeting text
-            Text("Welcome back")
-                .font(.largeTitle)
-                .fontWeight(.semibold)
-                .padding()
-            
-            //MARK: textfields
-            VStack(spacing: 65) {
-                VStack(spacing: 45) {
-                    TextField("First name", text: $name)
-                        .modifier(PlaceholderModifier())
-                    ZStack(alignment: .trailing) {
-                        Group {
-                            if hidden {
-                                TextField("Password", text: $password)
-                                    .modifier(PlaceholderModifier())
-                            } else {
-                                SecureField("Password", text: $password)
-                                    .modifier(PlaceholderModifier())
+        
+        NavigationView {
+            VStack(spacing: 55) {
+                //MARK: greeting text
+                Text("Welcome back")
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .padding()
+                
+                //MARK: textfields
+                VStack(spacing: 65) {
+                    VStack(spacing: 45) {
+                        TextField("First name", text: $name)
+                            .modifier(PlaceholderModifier())
+                        ZStack(alignment: .trailing) {
+                            Group {
+                                if hidden {
+                                    TextField("Password", text: $password)
+                                        .modifier(PlaceholderModifier())
+                                } else {
+                                    SecureField("Password", text: $password)
+                                        .modifier(PlaceholderModifier())
+                                }
+                            } // Group
+                            //MARK: eye button
+                            Button(action: {
+                                self.hidden.toggle()})
+                            {
+                                Image(systemName: self.hidden == true ? "eye.fill" : "eye.slash.fill")
+                                    .foregroundColor(self.hidden ? .green : .gray)
+                                    .offset(x: -10, y: 0)
                             }
-                        } // Group
-                        //MARK: eye button
-                        Button(action: {
-                            self.hidden.toggle()})
-                        {
-                            Image(systemName: self.hidden == true ? "eye.fill" : "eye.slash.fill")
-                                .foregroundColor(self.hidden ? .green : .gray)
-                                .offset(x: -10, y: 0)
-                        }
-                    } // ZStack
-                } // VStack(spacing: 45)
-                .padding()
-                .textFieldStyle(OvalTextFieldStyle())
-                
-                VStack(alignment: .leading, spacing: 10){
-                    //MARK: Button
-                    Button(action: {}) {
-                        HStack{
-                            Spacer()
-                            Text("Login")
-                                .padding()
-                                .foregroundColor(.white)
-                                .font(.headline)
-                            Spacer()
-                        }
-                    }
+                        } // ZStack
+                    } // VStack(spacing: 45)
+                    .padding()
+                    .textFieldStyle(OvalTextFieldStyle())
                     
-                    .buttonStyle(SignInButtonStyle())
-                } // VStack(alignment: .leading, spacing: 10)
-                
+                    
+                        //MARK: Button
+                        Button(action: {}) {
+                            HStack{
+                                Spacer()
+                                Text("Login")
+                                    .padding()
+                                    .foregroundColor(.white)
+                                    .font(.headline)
+                                Spacer()
+                            }
+                        }
+                        
+                        .buttonStyle(SignInButtonStyle())
+                } //  VStack(spacing: 65)
             }
+            .offset(x: 0, y: -45)
         }
     }
     
