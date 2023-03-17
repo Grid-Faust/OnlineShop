@@ -20,8 +20,8 @@ struct LoginView: View {
             VStack(spacing: 55) {
                 //MARK: greeting text
                 Text("Welcome back")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
+                    .font(.custom("Montserrat-Bold", size: 30))
+                    .fontWeight(.heavy)
                     .padding()
                 
                 //MARK: textfields
