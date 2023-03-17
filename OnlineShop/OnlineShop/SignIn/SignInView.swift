@@ -17,8 +17,7 @@ struct SignInView: View {
         NavigationView {
             VStack(spacing: 50){
                 Text("Sign in")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
+                    .font(.custom(.MontserratSemiBold, size: 30))
                     .padding()
                 
                 //MARK: textfilds
@@ -42,14 +41,12 @@ struct SignInView: View {
                             HStack{
                                 Spacer()
                                 Text("Sign in")
-                                    .padding()
-                                    .foregroundColor(.white)
-                                    .font(.headline)
+                                    .modifier(ButtonModifier())
                                 Spacer()
                             }
                         }
                         
-                        .buttonStyle(SignInButtonStyle())
+                        .buttonStyle(AuthorizationButtonStyle())
                         
                         //MARK: Log in
                         HStack(alignment: .firstTextBaseline, spacing: 7){
@@ -84,7 +81,7 @@ struct SignInView: View {
                                 .frame(width: 23.83, height: 24.22)
                             
                             Text("Sign in with Google")
-                                .font(.callout)
+                                .font(.custom(.MontserratMedium, size: 14))
                                 .tint(.black)
                         }
                     }
@@ -96,7 +93,7 @@ struct SignInView: View {
                                 .frame(width: 18.38, height: 21.87)
                             
                             Text("Sign in with Apple")
-                                .font(.callout)
+                                .font(.custom(.MontserratMedium, size: 14))
                                 .tint(.black)
                         }
                     }

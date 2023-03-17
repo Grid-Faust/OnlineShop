@@ -20,8 +20,7 @@ struct LoginView: View {
             VStack(spacing: 55) {
                 //MARK: greeting text
                 Text("Welcome back")
-                    .font(.custom("Montserrat-Bold", size: 30))
-                    .fontWeight(.heavy)
+                    .font(.custom(.MontserratSemiBold, size: 30))
                     .padding()
                 
                 //MARK: textfields
@@ -59,13 +58,13 @@ struct LoginView: View {
                                 Spacer()
                                 Text("Login")
                                     .padding()
-                                    .foregroundColor(.white)
-                                    .font(.headline)
+                                    .modifier(ButtonModifier())
+                                    
                                 Spacer()
                             }
                         }
                         
-                        .buttonStyle(SignInButtonStyle())
+                        .buttonStyle(AuthorizationButtonStyle())
                 } //  VStack(spacing: 65)
             }
             .offset(x: 0, y: -45)
