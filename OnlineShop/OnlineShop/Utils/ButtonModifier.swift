@@ -19,6 +19,9 @@ struct ButtonModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding(20)
+            .fixedSize()
+            .foregroundColor(.white)
+            .font(.custom(.MontserratSemiBold, size: 16))
             .frame(width: weight, height: height, alignment: .center)
             .background(
                 RoundedRectangle(

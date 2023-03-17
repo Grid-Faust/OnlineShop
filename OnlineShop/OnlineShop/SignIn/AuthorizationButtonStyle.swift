@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct SignInButtonStyle: ButtonStyle {
+struct AuthorizationButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {
         return SignInButton(
@@ -28,7 +28,7 @@ struct SignInButtonStyle: ButtonStyle {
     
 }
 
-struct SignInButtonStyle_Previews: PreviewProvider {
+struct AuthorizationButtonStyle_Previews: PreviewProvider {
     static var previews: some View {
         Button(action: {}) {
             Button(action: {}) {
@@ -42,6 +42,6 @@ struct SignInButtonStyle_Previews: PreviewProvider {
                 }
                 
             }
-        }.buttonStyle(SignInButtonStyle())
+        }.buttonStyle(AuthorizationButtonStyle())
     }
 }

@@ -53,6 +53,6 @@ struct PlaceholderModifier: ViewModifier {
             .multilineTextAlignment(.center)
             .foregroundColor(.placeholder)
             .frame(width: weight, height: height, alignment: .center)
-            .font(.headline)
+            .font(.custom(.MontserratSemiBold, size: 14))
     }
 }
